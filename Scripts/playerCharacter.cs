@@ -1,20 +1,19 @@
 using Godot;
 using System;
 
-public partial class playerCharacter : Node
+public partial class playerCharacter : CharacterBody2D
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
+    [Export]
+	public const float Speed = 300.0f;
+    public Vector2 ScreenSize; // Size of the game window.
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
-    public override void _PhysicsProcess(double delta)
+    public override void _Ready()
     {
+        ScreenSize = GetViewportRect().Size;
+    }
 
+    public override void _PhysicsProcess(double delta)
+	{
         var velocity = Vector2.Zero; // The player's movement vector.
 
         if (Input.IsActionPressed("move_right"))
@@ -36,5 +35,16 @@ public partial class playerCharacter : Node
         {
             velocity.Y -= 1;
         }
+
+        if (velocity.Length() > 0)
+        {
+            velocity = velocity.Normalized() * Speed;
+        }
+
+        Position += velocity * (float)delta;
+        Position = new Vector2(
+            x: Mathf.Clamp(Position.X, 0, ScreenSize.X),
+            y: Mathf.Clamp(Position.Y, 0, ScreenSize.Y)
+        );
     }
 }
