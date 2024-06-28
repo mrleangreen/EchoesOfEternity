@@ -12,4 +12,29 @@ public partial class playerCharacter : Node
 	public override void _Process(double delta)
 	{
 	}
+    public override void _PhysicsProcess(double delta)
+    {
+
+        var velocity = Vector2.Zero; // The player's movement vector.
+
+        if (Input.IsActionPressed("move_right"))
+        {
+            velocity.X += 1;
+        }
+
+        if (Input.IsActionPressed("move_left"))
+        {
+            velocity.X -= 1;
+        }
+
+        if (Input.IsActionPressed("move_down"))
+        {
+            velocity.Y += 1;
+        }
+
+        if (Input.IsActionPressed("move_up"))
+        {
+            velocity.Y -= 1;
+        }
+    }
 }
