@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Godot Game Projects\\EchoesOfEternity\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CDC835E0-B5C4-44FE-9A51-9FFFE547B31F}|Echoes of Eternity.csproj|d:\\godot game projects\\echoesofeternity\\scripts\\professions\\baseclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDC835E0-B5C4-44FE-9A51-9FFFE547B31F}|Echoes of Eternity.csproj|solutionrelative:scripts\\professions\\baseclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaseClass.cs",
+              "DocumentMoniker": "D:\\Godot Game Projects\\EchoesOfEternity\\Scripts\\Professions\\BaseClass.cs",
+              "RelativeDocumentMoniker": "Scripts\\Professions\\BaseClass.cs",
+              "ToolTip": "D:\\Godot Game Projects\\EchoesOfEternity\\Scripts\\Professions\\BaseClass.cs*",
+              "RelativeToolTip": "Scripts\\Professions\\BaseClass.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T17:41:29.218Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
