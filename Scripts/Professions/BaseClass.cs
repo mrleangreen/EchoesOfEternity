@@ -9,6 +9,7 @@ public partial class BaseClass
     public int attackPower;
     public int defense;
     public int health;
+    public int maxHealth;
     public int specialPower;
     public int exp;
     public int dex;
@@ -22,6 +23,7 @@ public partial class BaseClass
         attackPower = stats.ContainsKey("attackPower") ? stats["attackPower"] : 0;
         defense = stats.ContainsKey("defense") ? stats["attackPower"] : 0;
         health = stats.ContainsKey("health") ? stats["health"] : 0;
+        maxHealth = stats.ContainsKey("maxHealth") ? stats["maxHealth"] : 100
         specialPower = stats.ContainsKey("specialPower") ? stats["specialPower"] : 0;
         exp = stats.ContainsKey("exp") ? stats["exp"] : 0;
         dex = stats.ContainsKey("dex") ? stats["dex"] : 0;
@@ -47,6 +49,6 @@ public partial class BaseClass
     }
     public virtual void SpecialAbility()
     {
-
+        
     }
 }
