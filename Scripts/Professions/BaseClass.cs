@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Transactions;
+using Godot.Collections;
 
 public partial class BaseClass
 {
@@ -14,23 +15,37 @@ public partial class BaseClass
     public int intelligence;
     public int str;
 
-    public void Attack()
+    //constructor
+    public BaseClass(string name, Dictionary<string, int> stats)
+    {
+        characterName = name;
+        attackPower = stats.ContainsKey("attackPower") ? stats["attackPower"] : 0;
+        defense = stats.ContainsKey("defense") ? stats["attackPower"] : 0;
+        health = stats.ContainsKey("health") ? stats["health"] : 0;
+        specialPower = stats.ContainsKey("specialPower") ? stats["specialPower"] : 0;
+        exp = stats.ContainsKey("exp") ? stats["exp"] : 0;
+        dex = stats.ContainsKey("dex") ? stats["dex"] : 0;
+        intelligence = stats.ContainsKey("intelligence") ? stats["intelligence"] : 0;
+        str = stats.ContainsKey("strength") ? stats["strength"] : 0;
+
+    }
+    public virtual void Attack()
     {
 
     }
-    public void Defend()
+    public virtual void Defend()
     {
 
     }
-    public void RunAway()
+    public virtual void RunAway()
     {
 
     }
     public void UseItem()
     {
-
+        GD.Print("Character opened the item menu");
     }
-    public void SpecialAbility()
+    public virtual void SpecialAbility()
     {
 
     }
