@@ -1,31 +1,37 @@
 using Godot;
+using System;
 using Godot.Collections;
-
-namespace EchoesofEternity.Scripts.Professions;
 
 public class WarriorClass : BaseClass
 {
+    public int rage;
+
+    // Constructor
     public WarriorClass(string name, Dictionary<string, int> stats) : base(name, stats)
     {
+        rage = stats.ContainsKey("rage") ? stats["rage"] : 0;
     }
 
     public override void Attack()
     {
-        GD.Print("Warrior attacks with advantage!");
+        base.Attack();
+        GD.Print(characterName + " attacks with warrior's fury!");
     }
 
     public override void Defend()
     {
-        GD.Print("Warrior defends!");
-    }
-
-    public override void RunAway()
-    {
-        GD.Print("Warrior attempts to run away!");
+        base.Defend();
+        GD.Print(characterName + " defends with warrior's shield!");
     }
 
     public override void SpecialAbility()
     {
-        GD.Print("Warrior does BIG damage!");
+        GD.Print(characterName + " uses a powerful strike!");
+    }
+
+    public void BuildRage(int amount)
+    {
+        rage += amount;
+        GD.Print(characterName + " builds rage. Current rage: " + rage);
     }
 }
