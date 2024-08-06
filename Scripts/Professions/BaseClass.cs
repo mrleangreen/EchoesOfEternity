@@ -23,7 +23,7 @@ public partial class BaseClass
         attackPower = stats.ContainsKey("attackPower") ? stats["attackPower"] : 0;
         defense = stats.ContainsKey("defense") ? stats["attackPower"] : 0;
         health = stats.ContainsKey("health") ? stats["health"] : 0;
-        maxHealth = stats.ContainsKey("maxHealth") ? stats["maxHealth"] : 100
+        maxHealth = stats.ContainsKey("maxHealth") ? stats["maxHealth"] : 100;
         specialPower = stats.ContainsKey("specialPower") ? stats["specialPower"] : 0;
         exp = stats.ContainsKey("exp") ? stats["exp"] : 0;
         dex = stats.ContainsKey("dex") ? stats["dex"] : 0;

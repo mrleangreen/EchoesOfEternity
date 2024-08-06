@@ -1,0 +1,168 @@
+[gd_scene load_steps=3 format=3 uid="uid://bo3arv5xyq443"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.cs" id="1_jn38b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w1g2q"]
+font_size = 90
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jn38b")
+levelScene = "res://Scenes/testLevel.tscn"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 1153.0
+offset_bottom = 650.0
+
+[node name="MainButtons" type="VBoxContainer" parent="CanvasLayer"]
+top_level = true
+custom_minimum_size = Vector2(200, 100)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = -174.0
+offset_right = -1.0
+offset_bottom = 134.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="TextureButton" parent="CanvasLayer/MainButtons"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/MainButtons/StartButton"]
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 175.0
+scale = Vector2(0.5, 0.5)
+text = "Start"
+label_settings = SubResource("LabelSettings_w1g2q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsButton" type="TextureButton" parent="CanvasLayer/MainButtons"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/MainButtons/SettingsButton"]
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 175.0
+scale = Vector2(0.5, 0.5)
+text = "Settings"
+label_settings = SubResource("LabelSettings_w1g2q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="TextureButton" parent="CanvasLayer/MainButtons"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/MainButtons/ExitButton"]
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 175.0
+scale = Vector2(0.5, 0.5)
+text = "Exit"
+label_settings = SubResource("LabelSettings_w1g2q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SettingsButtons" type="VBoxContainer" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 174.0
+offset_top = -174.0
+offset_right = 399.0
+offset_bottom = 238.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Setting1" type="TextureButton" parent="CanvasLayer/SettingsButtons"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/SettingsButtons/Setting1"]
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 175.0
+scale = Vector2(0.5, 0.5)
+text = "Setting 1"
+label_settings = SubResource("LabelSettings_w1g2q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Setting2" type="TextureButton" parent="CanvasLayer/SettingsButtons"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/SettingsButtons/Setting2"]
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 175.0
+scale = Vector2(0.5, 0.5)
+text = "Setting 2"
+label_settings = SubResource("LabelSettings_w1g2q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Setting3" type="TextureButton" parent="CanvasLayer/SettingsButtons"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/SettingsButtons/Setting3"]
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 175.0
+scale = Vector2(0.5, 0.5)
+text = "Setting 3"
+label_settings = SubResource("LabelSettings_w1g2q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReturnButton" type="TextureButton" parent="CanvasLayer/SettingsButtons"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/SettingsButtons/ReturnButton"]
+layout_mode = 0
+offset_right = 450.0
+offset_bottom = 175.0
+scale = Vector2(0.5, 0.5)
+text = "Return"
+label_settings = SubResource("LabelSettings_w1g2q")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/MainButtons/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainButtons/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainButtons/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/SettingsButtons/ReturnButton" to="." method="_on_return_button_pressed"]
