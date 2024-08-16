@@ -15,6 +15,11 @@ public partial class BaseClass
 	public int dex;
 	public int intelligence;
 	public int str;
+	
+	//if we want stackable, maybe have buff and debuff be a number to describe how many stacks, or just have a counter
+	public int buff = 0;
+	public int debuff = 0;
+	protected Random rand;
 
 	//constructor
 	public BaseClass(string name, Dictionary<string, int> stats)
@@ -29,6 +34,7 @@ public partial class BaseClass
 		dex = stats.ContainsKey("dex") ? stats["dex"] : 0;
 		intelligence = stats.ContainsKey("intelligence") ? stats["intelligence"] : 0;
 		str = stats.ContainsKey("strength") ? stats["strength"] : 0;
+		rand = new Random();
 
 	}
 	public virtual int Attack()
@@ -52,8 +58,8 @@ public partial class BaseClass
 	{
 		GD.Print("Character opened the item menu");
 	}
-	public virtual void SpecialAbility()
+	
+	public virtual void SpecialAbility(BaseClass enemy)
 	{
-		
 	}
 }

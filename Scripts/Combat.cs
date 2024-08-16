@@ -68,6 +68,16 @@ public partial class Combat : Node
             //TODO: Maybe a penalty
             return false;
     }
+
+    public void playerSpecialAbility()
+    {
+        player.SpecialAbility(enemy);
+    }
+
+    public void enemySpecialAbility()
+    {
+        enemy.SpecialAbility(player);
+    }
     
     
 }
